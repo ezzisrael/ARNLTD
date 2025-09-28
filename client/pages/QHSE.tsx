@@ -5,7 +5,7 @@ import LogosStripLight from "@/components/site/LogosStripLight";
 import QHSECarousel from "@/components/site/QHSECarousel";
 import CTAQHSEBlack from "@/components/site/CTAQHSEBlack";
 
-export default function QHSE(){
+export default function QHSE() {
   return (
     <main>
       <Hero
@@ -17,7 +17,12 @@ export default function QHSE(){
 
       <section className="bg-white">
         <div className="container py-12 text-center max-w-3xl">
-          <p className="text-gray-700">At Aron Nigeria Limited, QHSE is not just a standard — it’s our foundation. We integrate quality assurance, occupational health, workplace safety, and environmental stewardship into every project we deliver.</p>
+          <p className="text-gray-700">
+            At Aron Nigeria Limited, QHSE is not just a standard — it’s our
+            foundation. We integrate quality assurance, occupational health,
+            workplace safety, and environmental stewardship into every project
+            we deliver.
+          </p>
         </div>
       </section>
 

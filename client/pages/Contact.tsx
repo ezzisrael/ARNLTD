@@ -4,7 +4,7 @@ import ContactForm from "@/components/site/ContactForm";
 import MapEmbed from "@/components/site/MapEmbed";
 import CTABlack from "@/components/site/CTABlack";
 
-export default function Contact(){
+export default function Contact() {
   return (
     <main>
       <Hero
@@ -16,7 +16,12 @@ export default function Contact(){
       <ContactInfo />
       <ContactForm />
       <MapEmbed />
-      <CTABlack heading="Let’s Build Together." subline="Your vision, our expertise." buttonLabel="Request a Consultation" to="/contact" />
+      <CTABlack
+        heading="Let’s Build Together."
+        subline="Your vision, our expertise."
+        buttonLabel="Request a Consultation"
+        to="/contact"
+      />
     </main>
   );
 }

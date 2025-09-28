@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
 
-export default function QHSECommitment(){
+export default function QHSECommitment() {
   const items = [
     "Comply with all statutory and regulatory requirements.",
     "Prevent accidents through proactive risk assessment.",
@@ -11,7 +11,11 @@ export default function QHSECommitment(){
   return (
     <section className="bg-white py-16">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <img src="https://images.unsplash.com/photo-1543198126-a3f3f8690ee0?q=80&w=1400&auto=format&fit=crop" alt="Workers in PPE" className="rounded-xl h-72 md:h-[420px] w-full object-cover" />
+        <img
+          src="https://images.unsplash.com/photo-1543198126-a3f3f8690ee0?q=80&w=1400&auto=format&fit=crop"
+          alt="Workers in PPE"
+          className="rounded-xl h-72 md:h-[420px] w-full object-cover"
+        />
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">Our Commitment</h2>
           <ul className="mt-4 space-y-3">
