@@ -6,7 +6,7 @@ import ClientsStrip from "@/components/site/ClientsStrip";
 import NewsInsights from "@/components/site/NewsInsights";
 import CTABanner from "@/components/site/CTABanner";
 
-export default function Home(){
+export default function Home() {
   return (
     <main>
       <HeroSlider />

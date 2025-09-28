@@ -8,8 +8,13 @@ export default function ClientsStrip() {
       <div className="overflow-hidden">
         <div className="flex animate-[marquee_20s_linear_infinite] gap-8 py-6 will-change-transform">
           {list.map((c, idx) => (
-            <div key={idx} className="h-14 w-36 shrink-0 rounded-md bg-white grid place-items-center text-black font-semibold grayscale hover:grayscale-0 transition">
-              <span className="px-2" style={{ color: c.color }}>{c.name}</span>
+            <div
+              key={idx}
+              className="h-14 w-36 shrink-0 rounded-md bg-white grid place-items-center text-black font-semibold grayscale hover:grayscale-0 transition"
+            >
+              <span className="px-2" style={{ color: c.color }}>
+                {c.name}
+              </span>
             </div>
           ))}
         </div>

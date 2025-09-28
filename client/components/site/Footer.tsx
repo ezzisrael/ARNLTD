@@ -24,7 +24,11 @@ export default function Footer() {
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-center">
           {quickLinks.map((l) => (
-            <Link key={l.to} to={l.to} className="text-white/80 hover:text-white">
+            <Link
+              key={l.to}
+              to={l.to}
+              className="text-white/80 hover:text-white"
+            >
               {l.label}
             </Link>
           ))}

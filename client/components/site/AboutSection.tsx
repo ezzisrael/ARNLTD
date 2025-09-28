@@ -9,7 +9,10 @@ const aboutSlides = [
 export default function AboutSection() {
   const [i, setI] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setI((v) => (v + 1) % aboutSlides.length), 4000);
+    const id = setInterval(
+      () => setI((v) => (v + 1) % aboutSlides.length),
+      4000,
+    );
     return () => clearInterval(id);
   }, []);
 
@@ -18,13 +21,29 @@ export default function AboutSection() {
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div className="relative h-72 md:h-[420px] overflow-hidden rounded-xl">
           {aboutSlides.map((src, idx) => (
-            <img key={src} src={src} alt="About Aron" className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`} />
+            <img
+              key={src}
+              src={src}
+              alt="About Aron"
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0"}`}
+            />
           ))}
         </div>
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">About Us</h2>
-          <p className="mt-4 text-gray-600 leading-relaxed">Aron Nigeria Limited has been building since 1984, delivering complex infrastructure and architectural projects with precision, integrity, and a relentless commitment to safety. Our multidisciplinary teams bring innovation to every stage, from concept to commissioning.</p>
-          <a href="/about" className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-white font-semibold hover:bg-primary/90">Learn More About Us</a>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            Aron Nigeria Limited has been building since 1984, delivering
+            complex infrastructure and architectural projects with precision,
+            integrity, and a relentless commitment to safety. Our
+            multidisciplinary teams bring innovation to every stage, from
+            concept to commissioning.
+          </p>
+          <a
+            href="/about"
+            className="mt-6 inline-block rounded-full bg-primary px-6 py-3 text-white font-semibold hover:bg-primary/90"
+          >
+            Learn More About Us
+          </a>
         </div>
       </div>
     </section>
