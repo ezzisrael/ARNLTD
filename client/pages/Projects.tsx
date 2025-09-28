@@ -5,7 +5,7 @@ import StatsBanner from "@/components/site/StatsBanner";
 import Testimonials from "@/components/site/Testimonials";
 import CTABanner from "@/components/site/CTABanner";
 
-export default function Projects(){
+export default function Projects() {
   return (
     <main>
       <Hero

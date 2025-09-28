@@ -5,7 +5,7 @@ import WhyChoose from "@/components/site/WhyChoose";
 import ProcessTimeline from "@/components/site/ProcessTimeline";
 import CTABanner from "@/components/site/CTABanner";
 
-export default function Services(){
+export default function Services() {
   return (
     <main>
       <Hero
@@ -18,7 +18,11 @@ export default function Services(){
       <ServicesAccordion />
       <WhyChoose />
       <ProcessTimeline />
-      <CTABanner heading="Partner with us to bring your project to life." subline="" buttonLabel="Contact Us Today" />
+      <CTABanner
+        heading="Partner with us to bring your project to life."
+        subline=""
+        buttonLabel="Contact Us Today"
+      />
     </main>
   );
 }
