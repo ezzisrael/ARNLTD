@@ -36,11 +36,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl md:text-3xl font-bold">Our Story</h2>
             <p className="mt-4 text-gray-600 leading-relaxed">
-              Aron Nigeria Limited is a leading construction and engineering
-              firm, proudly serving Nigeria since 1984. We have executed
-              landmark projects across housing, sports, education, and
-              infrastructure — each one built with a commitment to excellence
-              and sustainability.
+              We are a leading engineering and construction company in Nigeria with over 40 years of experience. Specializing in delivering high-quality projects, we have built numerous port facilities and successfully executed a wide range of government and private sector developments. At Aron Nigeria, we combine innovation, durability, and safety to contribute meaningfully to Nigeria infrastructure growth. Our commitment to excellence ensures that every project meets the highest standards and stands the test of time.
             </p>
             <a
               href="/about"
