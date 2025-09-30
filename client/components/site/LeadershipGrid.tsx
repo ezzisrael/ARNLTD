@@ -1,7 +1,7 @@
 type Leader = { name: string; role: string; bio: string; photo: string };
 const leaders: Leader[] = [
   {
-    name: "Adeyemi Johnson",
+    name: "Otunba Fatai Arowolo",
     role: "Chief Executive Officer",
     bio: "Three decades leading large infrastructure programs across Nigeria.",
     photo:
@@ -46,8 +46,8 @@ export default function LeadershipGrid() {
                 alt={l.name}
                 className="h-52 w-full object-cover grayscale hover:grayscale-0 transition"
               />
-              <div className="p-4">
-                <h3 className="font-semibold">{l.name}</h3>
+              <div className="p-4 text-center">
+                <h3 className="font-semibold text-[18px]"><strong>{l.name}</strong></h3>
                 <p className="text-sm text-primary">{l.role}</p>
                 <p className="mt-2 text-sm text-gray-600">{l.bio}</p>
               </div>
