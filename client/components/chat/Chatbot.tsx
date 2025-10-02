@@ -206,14 +206,14 @@ export default function Chatbot() {
 
       <div
         className={`${open ? 'opacity-100' : 'opacity-0 pointer-events-none'} transform transition-all`}
-        style={isMobile ? { position: 'fixed', inset: 0 } : { position: 'fixed', left: pos.left, bottom: pos.bottom + 80 }}
+        style={isMobile ? { position: 'fixed', left: 12, right: 12, bottom: pos.bottom + 80 } : { position: 'fixed', left: pos.left, bottom: pos.bottom + 80 }}
       >
-        <div className={`${isMobile ? 'h-full w-full rounded-none' : 'mt-3 w-80 max-w-[92vw] rounded-2xl'} overflow-hidden shadow-2xl border bg-white`}>
+        <div className={`${isMobile ? 'w-full h-[70vh] rounded-2xl' : 'mt-3 w-80 max-w-[92vw] rounded-2xl'} overflow-hidden shadow-2xl border bg-white`}>
           <div className="bg-black text-white px-4 py-3 flex items-center gap-2">
             <div className="h-6 w-6 rounded-sm bg-primary" />
             <div className="font-semibold">Aron Assistant</div>
           </div>
-          <div className="bg-white p-4 text-sm text-gray-800 space-y-3 h-[calc(100%-52px)] md:h-auto overflow-auto">
+          <div className="bg-white p-4 text-sm text-gray-800 space-y-3 h-[calc(70vh-52px)] md:h-auto overflow-auto">
             {view === "home" && <Home />}
             {view === "services" && <Services />}
             {view === "about" && <About />}
