@@ -56,6 +56,15 @@ export default function Header() {
               {l.label}
             </NavLink>
           ))}
+          <button
+            onClick={() => window.dispatchEvent(new Event('chatbot:enableAndOpen'))}
+            className={cn(
+              "text-white/90 hover:text-white relative py-1",
+              "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+            )}
+          >
+            ChatBot
+          </button>
         </nav>
 
         <div className="hidden md:block">
