@@ -12,11 +12,15 @@ export default function Chatbot() {
   const [dragging, setDragging] = useState(false);
   const [hover, setHover] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [enabled, setEnabled] = useState<boolean>(() => {
+    try { return localStorage.getItem('chatbot_enabled') !== 'false'; } catch { return true; }
+  });
 
   useEffect(() => {
+    if (!enabled) return;
     const id = setTimeout(() => setOpen(true), 3000);
     return () => clearTimeout(id);
-  }, []);
+  }, [enabled]);
 
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 768px)');
@@ -24,6 +28,33 @@ export default function Chatbot() {
     update();
     mq.addEventListener('change', update);
     return () => mq.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    try { localStorage.setItem('chatbot_enabled', String(enabled)); } catch {}
+  }, [enabled]);
+
+  useEffect(() => {
+    const onOpen = () => { setEnabled(true); setOpen(true); };
+    const onClose = () => setOpen(false);
+    const onEnable = () => setEnabled(true);
+    const onDisable = () => { setOpen(false); setEnabled(false); };
+    const onToggle = () => setOpen((v) => !v);
+    const onEnableAndOpen = () => { setEnabled(true); setOpen(true); };
+    window.addEventListener('chatbot:open', onOpen as EventListener);
+    window.addEventListener('chatbot:close', onClose as EventListener);
+    window.addEventListener('chatbot:enable', onEnable as EventListener);
+    window.addEventListener('chatbot:disable', onDisable as EventListener);
+    window.addEventListener('chatbot:toggle', onToggle as EventListener);
+    window.addEventListener('chatbot:enableAndOpen', onEnableAndOpen as EventListener);
+    return () => {
+      window.removeEventListener('chatbot:open', onOpen as EventListener);
+      window.removeEventListener('chatbot:close', onClose as EventListener);
+      window.removeEventListener('chatbot:enable', onEnable as EventListener);
+      window.removeEventListener('chatbot:disable', onDisable as EventListener);
+      window.removeEventListener('chatbot:toggle', onToggle as EventListener);
+      window.removeEventListener('chatbot:enableAndOpen', onEnableAndOpen as EventListener);
+    };
   }, []);
 
   function Home() {
@@ -168,6 +199,8 @@ export default function Chatbot() {
     );
   }
 
+  if (!enabled) return null;
+
   return (
     <div className="fixed z-50" style={{ left: pos.left, bottom: pos.bottom }}>
       <button
@@ -209,9 +242,15 @@ export default function Chatbot() {
         style={isMobile ? { position: 'fixed', left: 12, right: 12, bottom: pos.bottom + 80 } : { position: 'fixed', left: pos.left, bottom: pos.bottom + 80 }}
       >
         <div className={`${isMobile ? 'w-full h-[70vh] rounded-2xl' : 'mt-3 w-80 max-w-[92vw] rounded-2xl'} overflow-hidden shadow-2xl border bg-white`}>
-          <div className="bg-black text-white px-4 py-3 flex items-center gap-2">
-            <div className="h-6 w-6 rounded-sm bg-primary" />
-            <div className="font-semibold">Aron Assistant</div>
+          <div className="bg-black text-white px-4 py-3 flex items-center gap-2 justify-between">
+            <div className="flex items-center gap-2">
+              <div className="h-6 w-6 rounded-sm bg-primary" />
+              <div className="font-semibold">Aron Assistant</div>
+            </div>
+            <div className="flex items-center gap-3">
+              <button className="text-white/80 hover:text-white text-xs underline" onClick={() => setOpen(false)} aria-label="Close chat">Close</button>
+              <button className="text-primary hover:text-primary/80 text-xs underline" onClick={() => { setOpen(false); setEnabled(false); }} aria-label="Hide chat widget">Hide</button>
+            </div>
           </div>
           <div className="bg-white p-4 text-sm text-gray-800 space-y-3 h-[calc(70vh-52px)] md:h-auto overflow-auto">
             {view === "home" && <Home />}
