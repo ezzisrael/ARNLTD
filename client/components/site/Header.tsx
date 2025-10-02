@@ -163,6 +163,15 @@ export default function Header() {
                 {l.label}
               </NavLink>
             ))}
+            <button
+              onClick={() => {
+                window.dispatchEvent(new Event('chatbot:enableAndOpen'));
+                setOpen(false);
+              }}
+              className="px-3 py-3 rounded-md text-left text-base hover:bg-white/5 transition"
+            >
+              ChatBot
+            </button>
           </nav>
         </aside>
       </div>
