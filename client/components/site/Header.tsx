@@ -37,7 +37,7 @@ export default function Header() {
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 text-white">
           <div className="h-8 w-8 rounded-sm bg-primary"></div>
-          <span className="font-extrabold tracking-wide">ARON NIGERIA</span>
+          <span className="font-extrabold tracking-wide">ARON NIGERIA LIMITED</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -125,7 +125,7 @@ export default function Header() {
               onClick={() => setOpen(false)}
             >
               <div className="h-8 w-8 rounded-sm bg-primary"></div>
-              <span className="font-extrabold">ARON NIGERIA</span>
+              <span className="font-extrabold">ARON NIGERIA LIMITED</span>
             </Link>
             <button
               aria-label="Close menu"
