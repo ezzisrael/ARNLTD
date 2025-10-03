@@ -47,7 +47,7 @@ export default function Header() {
               to={l.to}
               className={({ isActive }) =>
                 cn(
-                  "text-white/90 hover:text-white relative py-1",
+                  "text-white/90 hover:text-white relative py-1 text-center lg:text-left",
                   "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
                   isActive && "after:w-full",
                 )
@@ -155,7 +155,7 @@ export default function Header() {
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
                   cn(
-                    "px-3 py-3 rounded-md text-base hover:bg-white/5 transition",
+                    "px-3 py-3 rounded-md text-base hover:bg-white/5 transition text-center",
                     isActive && "bg-white/10",
                   )
                 }
