@@ -70,7 +70,7 @@ export default function Header() {
         <div className="hidden md:block">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-white font-semibold shadow-sm hover:bg-primary/90"
+            className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-white font-semibold shadow-sm hover:bg-primary/90 ml-[0.7px] lg:ml-0"
           >
             Contact Us
           </Link>
