@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { toast } from "@/hooks/use-toast";
@@ -10,11 +10,25 @@ export default function Chatbot() {
   const [view, setView] = useState<View>("home");
   const [pos, setPos] = useState({ left: 16, bottom: 16 });
   const [dragging, setDragging] = useState(false);
+  const draggingRef = useRef(false);
+  const rafRef = useRef<number | null>(null);
   const [hover, setHover] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [enabled, setEnabled] = useState<boolean>(() => {
     try { return localStorage.getItem('chatbot_enabled') !== 'false'; } catch { return true; }
   });
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('chatbot_pos');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (typeof parsed.left === 'number' && typeof parsed.bottom === 'number') {
+          setPos(parsed);
+        }
+      }
+    } catch {}
+  }, []);
 
   useEffect(() => {
     if (!enabled) return;
@@ -208,21 +222,26 @@ export default function Chatbot() {
         onClick={() => setOpen((v) => !v)}
         onPointerDown={(e) => {
           if (isMobile) return; // no drag on mobile
+          e.preventDefault();
           setDragging(true);
+          draggingRef.current = true;
           const startX = e.clientX;
           const startY = e.clientY;
           const startLeft = pos.left;
           const startBottom = pos.bottom;
           const onMove = (ev: PointerEvent) => {
-            if (!dragging) return;
+            if (!draggingRef.current) return;
             const dx = ev.clientX - startX;
             const dy = ev.clientY - startY;
             const nextLeft = Math.max(8, Math.min(window.innerWidth - 72, startLeft + dx));
             const nextBottom = Math.max(8, Math.min(window.innerHeight - 72, startBottom - dy));
-            setPos({ left: nextLeft, bottom: nextBottom });
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+            rafRef.current = requestAnimationFrame(() => setPos({ left: nextLeft, bottom: nextBottom }));
           };
           const onUp = () => {
             setDragging(false);
+            draggingRef.current = false;
+            try { localStorage.setItem('chatbot_pos', JSON.stringify({ left: pos.left, bottom: pos.bottom })); } catch {}
             window.removeEventListener('pointermove', onMove);
             window.removeEventListener('pointerup', onUp);
           };
