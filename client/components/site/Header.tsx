@@ -67,10 +67,10 @@ export default function Header() {
           </button>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center ml-10 pl-6 border-l border-white/15">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-white font-semibold shadow-sm hover:bg-primary/90 ml-[0.7px] lg:ml-0"
+            className="inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm text-white font-semibold shadow-sm hover:bg-primary/90"
           >
             Contact Us
           </Link>
