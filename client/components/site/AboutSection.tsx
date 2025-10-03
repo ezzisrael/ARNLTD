@@ -32,7 +32,7 @@ export default function AboutSection() {
         <div>
           <h2 className="text-2xl md:text-3xl font-bold">About Us</h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
-            AWe are a leading engineering and construction company in Nigeria with over 40 years of experience. Specializing in the delivery of high-quality construction projects, we have built numerous port facilities and successfully executed a wide range of government and private sector projects. At Aron Nigeria, we combine innovation, durability, and safety to contribute meaningfully to Nigeria’s infrastructure development. Our commitment to excellence ensures that every project meets the highest standards and stands the test of time.
+            We are a leading engineering and construction company in Nigeria with over 40 years of experience. Specializing in the delivery of high-quality construction projects, we have built numerous port facilities and successfully executed a wide range of government and private sector projects. At Aron Nigeria, we combine innovation, durability, and safety to contribute meaningfully to Nigeria’s infrastructure development. Our commitment to excellence ensures that every project meets the highest standards and stands the test of time.
           </p>
           <a
             href="/about"
