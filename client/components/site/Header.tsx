@@ -36,8 +36,16 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 text-white">
-          <img src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128" alt="Aron Nigeria Limited logo" className="h-8 w-8 object-contain" width={32} height={32} />
-          <span className="font-extrabold tracking-wide">ARON NIGERIA LIMITED</span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128"
+            alt="Aron Nigeria Limited logo"
+            className="h-8 w-8 object-contain"
+            width={32}
+            height={32}
+          />
+          <span className="font-extrabold tracking-wide">
+            ARON NIGERIA LIMITED
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -57,10 +65,12 @@ export default function Header() {
             </NavLink>
           ))}
           <button
-            onClick={() => window.dispatchEvent(new Event('chatbot:enableAndOpen'))}
+            onClick={() =>
+              window.dispatchEvent(new Event("chatbot:enableAndOpen"))
+            }
             className={cn(
               "text-white/90 hover:text-white relative py-1",
-              "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+              "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
             )}
           >
             ChatBot
@@ -124,7 +134,13 @@ export default function Header() {
               className="flex items-center gap-2"
               onClick={() => setOpen(false)}
             >
-              <img src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128" alt="Aron Nigeria Limited logo" className="h-8 w-8 object-contain" width={32} height={32} />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128"
+                alt="Aron Nigeria Limited logo"
+                className="h-8 w-8 object-contain"
+                width={32}
+                height={32}
+              />
               <span className="font-extrabold">ARON NIGERIA LIMITED</span>
             </Link>
             <button
@@ -165,7 +181,7 @@ export default function Header() {
             ))}
             <button
               onClick={() => {
-                window.dispatchEvent(new Event('chatbot:enableAndOpen'));
+                window.dispatchEvent(new Event("chatbot:enableAndOpen"));
                 setOpen(false);
               }}
               className="px-3 py-3 rounded-md text-left text-base hover:bg-white/5 transition"
