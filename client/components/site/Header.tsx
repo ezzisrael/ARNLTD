@@ -36,7 +36,7 @@ export default function Header() {
     >
       <div className="container flex items-center justify-between py-4">
         <Link to="/" className="flex items-center gap-2 text-white">
-          <div className="h-8 w-8 rounded-sm bg-primary"></div>
+          <img src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128" alt="Aron Nigeria Limited logo" className="h-8 w-8 object-contain" width={32} height={32} />
           <span className="font-extrabold tracking-wide">ARON NIGERIA LIMITED</span>
         </Link>
 
@@ -124,7 +124,7 @@ export default function Header() {
               className="flex items-center gap-2"
               onClick={() => setOpen(false)}
             >
-              <div className="h-8 w-8 rounded-sm bg-primary"></div>
+              <img src="https://cdn.builder.io/api/v1/image/assets%2Fc51a6bd23f1c476caca0b78d5ca51be1%2F3a95d816962a43e6b2395077eb574236?format=webp&width=128" alt="Aron Nigeria Limited logo" className="h-8 w-8 object-contain" width={32} height={32} />
               <span className="font-extrabold">ARON NIGERIA LIMITED</span>
             </Link>
             <button
