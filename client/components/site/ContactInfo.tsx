@@ -5,13 +5,13 @@ type Card = { title: string; address: string; phone: string; email: string };
 const cards: Card[] = [
   {
     title: "Lagos Office",
-    address: "[Address]",
+    address: "ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria",
     phone: "+234 000 000 0000",
     email: "info@aronnigeria.com.ng",
   },
   {
     title: "Abuja Office",
-    address: "[Address]",
+    address: "Abuja, Nigeria",
     phone: "+234 000 000 0000",
     email: "abuja@aronnigeria.com.ng",
   },
