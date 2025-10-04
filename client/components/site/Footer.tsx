@@ -14,6 +14,17 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="border-t-2 border-primary" />
+      <div className="container pb-10">
+        <div className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10">
+          <iframe
+            title="Aron location map"
+            className="w-full h-64 grayscale"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src={`https://www.google.com/maps?q=${encodeURIComponent('ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria')}&output=embed`}
+          />
+        </div>
+      </div>
       <div className="container py-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 rounded-sm bg-primary" />
@@ -38,17 +49,6 @@ export default function Footer() {
           <p className="text-white/80">+234 800 000 0000</p>
           <p className="text-white/80">info@aron.com.ng</p>
           <p className="text-white/80">ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria</p>
-        </div>
-      </div>
-      <div className="container pb-10">
-        <div className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10">
-          <iframe
-            title="Aron location map"
-            className="w-full h-64 grayscale"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps?q=${encodeURIComponent('ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria')}&output=embed`}
-          />
         </div>
       </div>
       <div className="border-t border-white/10">
