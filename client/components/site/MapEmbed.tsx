@@ -1,10 +1,8 @@
 import { useState } from "react";
 
 const MAPS = {
-  lagos:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7924.311830430669!2d3.389!3d6.454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMTQuNCJOIDPCsDIzJzIwLjQiRQ!5e0!3m2!1sen!2sng!4v1700000000000",
-  abuja:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7898.532!2d7.489!3d9.057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zOScwMyc0NS4yIk4gNyAyOScyMC40IkU!5e0!3m2!1sen!2sng!4v1700000000001",
+  lagos: "https://www.google.com/maps?q=" + encodeURIComponent("ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria") + "&output=embed",
+  abuja: "https://www.google.com/maps?q=" + encodeURIComponent("Abuja, Nigeria") + "&output=embed",
 };
 
 export default function MapEmbed() {
