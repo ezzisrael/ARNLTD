@@ -45,7 +45,9 @@ export default function Header() {
           />
           <div className="leading-tight">
             <p className="font-extrabold tracking-wide">ARON NIGERIA</p>
-            <p className="text-xs text-white/70 -mt-0.5">Building since 1984 • Construction firm</p>
+            <p className="text-xs text-white/70 -mt-0.5">
+              Building since 1984 • Construction firm
+            </p>
           </div>
         </Link>
 
@@ -142,7 +144,12 @@ export default function Header() {
                 width={32}
                 height={32}
               />
-              <span className="font-extrabold leading-tight"><span className="block">ARON NIGERIA</span><span className="block text-xs text-white/70">Building since 1984 • Construction firm</span></span>
+              <span className="font-extrabold leading-tight">
+                <span className="block">ARON NIGERIA</span>
+                <span className="block text-xs text-white/70">
+                  Building since 1984 • Construction firm
+                </span>
+              </span>
             </Link>
             <button
               aria-label="Close menu"

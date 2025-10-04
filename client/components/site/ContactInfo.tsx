@@ -1,6 +1,11 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 
-type Card = { title: string; address: string; phones: string[]; emails: string[] };
+type Card = {
+  title: string;
+  address: string;
+  phones: string[];
+  emails: string[];
+};
 
 const cards: Card[] = [
   {

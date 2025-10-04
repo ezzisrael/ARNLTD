@@ -44,7 +44,9 @@ export default function Footer() {
           <p className="text-white/80">info@aronnigeria.com.ng</p>
           <p className="text-white/80">projects@aronnigeria.com.ng</p>
           <p className="text-white/80">finance@aronnigeria.com.ng</p>
-          <p className="text-white/80 mt-3">ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria</p>
+          <p className="text-white/80 mt-3">
+            ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria
+          </p>
         </div>
       </div>
 
@@ -56,7 +58,7 @@ export default function Footer() {
             className="w-full h-80 md:h-96 grayscale"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            src={`https://www.google.com/maps?q=${encodeURIComponent('ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria')}&output=embed`}
+            src={`https://www.google.com/maps?q=${encodeURIComponent("ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria")}&output=embed`}
           />
         </div>
       </div>

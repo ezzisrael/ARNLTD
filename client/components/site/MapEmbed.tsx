@@ -1,8 +1,16 @@
 import { useState } from "react";
 
 const MAPS = {
-  lagos: "https://www.google.com/maps?q=" + encodeURIComponent("ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria") + "&output=embed",
-  abuja: "https://www.google.com/maps?q=" + encodeURIComponent("Abuja, Nigeria") + "&output=embed",
+  lagos:
+    "https://www.google.com/maps?q=" +
+    encodeURIComponent(
+      "ARON House, 6 Lagos Street, Ebute Metta, Lagos, Nigeria",
+    ) +
+    "&output=embed",
+  abuja:
+    "https://www.google.com/maps?q=" +
+    encodeURIComponent("Abuja, Nigeria") +
+    "&output=embed",
 };
 
 export default function MapEmbed() {
