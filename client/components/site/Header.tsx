@@ -43,19 +43,20 @@ export default function Header() {
             width={32}
             height={32}
           />
-          <span className="font-extrabold tracking-wide">
-            ARON NIGERIA LIMITED
-          </span>
+          <div className="leading-tight">
+            <p className="font-extrabold tracking-wide">ARON NIGERIA</p>
+            <p className="text-xs text-white/70 -mt-0.5">Building since 1984 • Construction firm</p>
+          </div>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 text-sm">
+        <nav className="hidden md:flex items-center gap-8 text-sm flex-nowrap">
           {links.slice(0, -1).map((l) => (
             <NavLink
               key={l.to}
               to={l.to}
               className={({ isActive }) =>
                 cn(
-                  "text-white/90 hover:text-white relative py-1 text-center lg:text-left",
+                  "text-white/90 hover:text-white relative py-1 text-center lg:text-left whitespace-nowrap",
                   "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
                   isActive && "after:w-full",
                 )
@@ -69,7 +70,7 @@ export default function Header() {
               window.dispatchEvent(new Event("chatbot:enableAndOpen"))
             }
             className={cn(
-              "text-white/90 hover:text-white relative py-1",
+              "text-white/90 hover:text-white relative py-1 whitespace-nowrap",
               "after:absolute after:left-0 after:-bottom-0.5 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full",
             )}
           >
@@ -80,7 +81,7 @@ export default function Header() {
         <div className="hidden md:flex items-center ml-10 pl-6 border-l border-white/15">
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm text-white font-semibold shadow-sm hover:bg-primary/90"
+            className="inline-flex items-center rounded-full bg-primary px-6 py-2.5 text-sm text-white font-semibold shadow-sm hover:bg-primary/90 whitespace-nowrap"
           >
             Contact Us
           </Link>
