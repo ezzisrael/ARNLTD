@@ -142,7 +142,7 @@ export default function Header() {
                 width={32}
                 height={32}
               />
-              <span className="font-extrabold">ARON NIGERIA LIMITED</span>
+              <span className="font-extrabold leading-tight"><span className="block">ARON NIGERIA</span><span className="block text-xs text-white/70">Building since 1984 • Construction firm</span></span>
             </Link>
             <button
               aria-label="Close menu"
