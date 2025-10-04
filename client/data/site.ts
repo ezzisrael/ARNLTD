@@ -58,14 +58,18 @@ export const projects = [
 ];
 
 export const clients = [
-  { name: "Client A", color: "#ff8a00" },
-  { name: "Client B", color: "#00bcd4" },
-  { name: "Client C", color: "#8bc34a" },
-  { name: "Client D", color: "#e91e63" },
-  { name: "Client E", color: "#9c27b0" },
-  { name: "Client F", color: "#3f51b5" },
-  { name: "Client G", color: "#4caf50" },
-  { name: "Client H", color: "#ff5722" },
+  { name: "Nigerian Air Force", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/ngairforce-aron-140x140.jpg" },
+  { name: "University of Lagos", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/unilag-aron-140x140.jpg" },
+  { name: "Ogun State Government", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/ogungovt-aron-140x140.jpg" },
+  { name: "Gombe State Government", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/gombegovt-aron-140x140.jpg" },
+  { name: "Ekiti State Government", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/ekitigovt-aron-140x140.jpg" },
+  { name: "Daywaterman", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/daywaterman-aron-140x140.jpg" },
+  { name: "Nigeria Police Force", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/npf-aron-140x140.jpg" },
+  { name: "LASG Poly", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/lasgpoly-aron-140x140.jpg" },
+  { name: "University of Agriculture Abeokuta", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/uniagricabek-aron-140x140.jpg" },
+  { name: "FIFA", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/fifa-aron-140x140.jpg" },
+  { name: "Bells University of Technology", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/bellsunitech-aron-140x140.jpg" },
+  { name: "Lagos State Government", logo: "https://aronnigeria.com.ng/wp-content/uploads/image/jpeg/lasg-aron-140x140.jpg" },
 ];
 
 export const news = [
